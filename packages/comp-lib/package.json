@@ -1,0 +1,36 @@
+{
+  "name": "comp-lib",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/comp-lib.umd.cjs",
+  "module": "./dist/comp-lib.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/comp-lib.js",
+      "require": "./dist/comp-lib.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.2",
+    "vue-tsc": "^1.8.5"
+  }
+}

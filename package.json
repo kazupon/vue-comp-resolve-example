@@ -1,0 +1,11 @@
+{
+  "name": "vue-comp-resolve-example",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter app dev",
+    "build": "pnpm build:comp && pnpm build:app",
+    "build:app": "pnpm --filter app build",
+    "build:comp": "pnpm --filter comp-lib build" ,
+    "preview": "pnpm --filter app preview"
+  }
+}
